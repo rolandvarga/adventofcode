@@ -1,5 +1,5 @@
 def part_1():
-    with open('day1_input', 'r') as f:
+    with open('2022/day1_input', 'r') as f:
         data = f.read().splitlines()
 
         max_calories = 0
@@ -20,7 +20,7 @@ def part_1():
 
 
 def part_2():
-    with open('day1_input', 'r') as f:
+    with open('2022/day1_input', 'r') as f:
         data = f.read().splitlines()
 
         all_calories = []

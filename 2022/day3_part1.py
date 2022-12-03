@@ -15,8 +15,8 @@ def build_rucksack_from_line(line: str) -> Rucksack:
     )
 
 def load_all_rucksacks() -> List[Rucksack]:
-    # with open("day3_test_input") as f:
-    with open("day3_input") as f:
+    # with open("2022/day3_test_input") as f:
+    with open("2022/day3_input") as f:
         for line in f.read().splitlines():
             yield build_rucksack_from_line(line)
 

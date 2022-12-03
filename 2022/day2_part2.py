@@ -37,7 +37,7 @@ hand_points = {
 
 def part_2():
     score = 0
-    with open("day2_input") as f:
+    with open("2022/day2_input") as f:
         contents = f.read().splitlines()
 
         for line in contents:

@@ -21,10 +21,13 @@ hand = {
 
 def part_1():
     score = 0
-    with open("day2_input") as f:
+    with open("2022/day2_input") as f:
         contents = f.read().splitlines()
 
         for line in contents:
             score += points[line] + hand[line[-1]]
 
     print(score)
+
+if __name__ == '__main__':
+    part_1()
