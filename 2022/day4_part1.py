@@ -1,8 +1,8 @@
-from typing import List, NamedTuple
+from typing import List
 
 
-def list_sections_from(line):
-    sections = []
+def list_sections_from(line) -> List[int]:
+    sections: List[int] = []
     for section in line.split(","):
         start, end = [int(x) for x in section.split("-")]
         sections.append(list(range(start, end + 1)))
