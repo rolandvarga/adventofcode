@@ -16,16 +16,21 @@ prod_stacks: List[List[str]] = [
 ]
 
 
-def part_1():
+def part_2():
     top_crates = ""
+    # stacks: List[List[str]] = test_stacks
     stacks: List[List[str]] = prod_stacks
 
     with open("2022/day5_input") as f:
+        # with open("2022/day5_test_input") as f:
         for line in f.read().splitlines():
             repeat, start, end = [int(x) for x in line.split() if x.isdigit()]
 
+            intermediate = []
             for _ in range(repeat):
-                stacks[end].append(stacks[start].pop())
+                intermediate.append(stacks[start].pop())
+            intermediate.reverse()
+            stacks[end].extend(intermediate)
 
     for stack in stacks:
         if len(stack) > 0:
@@ -34,4 +39,4 @@ def part_1():
 
 
 if __name__ == "__main__":
-    part_1()
+    part_2()
